@@ -1,0 +1,368 @@
+body {
+    margin: 0;
+    font-family: 'Yaldevi', sans-serif;
+    font-size: 16px;
+    color: #1C2833;
+}
+
+hr {
+    border: 1px solid #ffd6ad;
+}
+
+a {
+    text-decoration: none;
+}
+
+a:link {
+    color: #1C2833;
+}
+
+a:visited {
+    color: #1C2833;
+}
+
+a:hover {
+    color: #1C2833;
+}
+
+a:active {
+    color: #1C2833;
+}
+
+.grid-container {
+    height: 100%;
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: 50px auto auto auto;
+    grid-template-areas: 
+        "h n n n n n n n n n n n"
+        "s s s s s s s s s s s s"
+        "m m m m m m m m m m m m"
+        "f f f f f f f f f f f f";
+}
+
+/* Header */
+.header {
+    background-color:#ebf0d6;
+    grid-area: h;
+    padding: 10px;
+    border-bottom: 1px solid #ebf0d6;
+}
+
+.header img {
+    height: 100%;
+}
+
+/* Navigation */
+.nav {
+    background-color: #ebf0d6;
+    grid-area: n;
+    border-bottom: 1px solid #ebf0d6;
+}
+
+.nav ul {
+    margin-block-start: 0px;
+    margin-block-end: 0px;
+    padding-inline-start: 0px;
+    margin: 12px 0;
+}
+
+.nav li {
+    display: inline;
+    margin: 5px;
+}
+
+/* Section */
+.section {
+    grid-area: s;
+    background-image: url(../images/img_1.jpg); 
+    background-size: cover; 
+    background-repeat: no-repeat;
+    opacity: 40%;
+    text-align: center;
+    max-height: 200px;
+}
+
+.section h1 {
+    margin: 18% 25% 25% 25%;
+    font-family: 'Satisfy', cursive;
+    font-size: 1.5em;
+}
+
+.section h1 span {
+    color: #963a2f;
+}
+
+/* Main */
+.main { 
+    background-color: #fff;
+    grid-area: m;
+    padding: 20px;
+    text-align: center;
+}
+
+.main h2 {
+    font-family: 'Satisfy', cursive;
+    font-size: 2.5em;
+}
+
+.main img {
+    opacity: 75%;
+    width: 300px;
+}
+
+.main iframe {
+    width: 325px;
+}
+
+/* Main Form*/
+.main .form {
+    text-align: left;
+    padding: 20px;
+}
+
+.main .form label {
+    display: block;
+    padding: 7px 0px 1px 0px;
+}
+
+.main .form input {
+    border: 1px solid #E4E5E4;
+    border-radius: 2px;
+    padding: 3px;
+    line-height: 24px;
+    width: 100%;
+}
+
+.main .form input[type=radio], .main .form input[type=checkbox] {
+    width: 5%;
+}
+
+.main .form textarea {
+    border: 1px solid #E4E5E4;
+    width: 100%;
+    border-radius: 2px;
+}
+
+.main .form input.button {
+    background-color: #ffd6ad;
+    border: 1px solid #ffd6ad;
+    border-radius: 2px;
+    padding: 8px;
+    font-family: 'Yaldevi', sans-serif;
+    font-size: 16px;
+    color: #1C2833;
+    width: auto;
+}
+
+
+/* Main Flexbox */
+.main .flex-container {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+/* Flexbox for Info */
+.main .flex-container .flex-box-info {
+    padding: 10px;
+}
+
+/* Grid for Video's */
+.grid-container-vid {
+    display: inline-grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(4, auto);
+    justify-content: space-evenly;
+}
+
+.section-vid { 
+    border-bottom: 1px solid #ffd6ad;
+    padding: 10px 0 10px 10px;
+    height: auto;
+}
+
+.section-text { 
+    border-bottom: 1px solid #ffd6ad;
+    padding: 10px 0 10px 10px;
+    text-align: left;
+    height: auto;
+}
+
+.grid-container-vid .section-vid iframe {
+    width: 175px;
+}
+
+.main .grid-container-vid .section-text h4 {
+    display: block;
+    margin-block-start: 0em;
+    margin-block-end: 0em;
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+.main .grid-container-vid .section-text p {
+    font-size: 13px;
+}
+
+/* Footer */
+.footer {
+    background-color: #ebf0d6;
+    grid-area: f;
+    padding: 5px;
+    border-top: 1px solid #ebf0d6;
+}
+
+.footer p {
+    text-align: center;
+    font-size: 11px;
+}
+
+/*Footer Flexbox*/
+.footer .flex-container {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+  
+.footer .flex-container .flex-box {
+    margin: 5px;
+    padding: 10px;
+    text-align: center;
+}
+
+.flex-box label {
+    font-weight: bold;
+}
+
+.flex-box i.fab {
+    font-size: 32px;
+    margin: 3px;
+}
+
+/* Media Queries */
+@media (min-width: 500px) {
+    .section h1 {
+        margin: 10% 25% 25% 25%;
+    }  
+}
+
+
+@media (min-width: 1024px) {
+    body {
+        font-size: 18px;
+    }
+
+    .grid-container {
+        grid-template-areas: 
+            "h n n n n n n n n n n n"
+            "s s s s s s s s s s s s"
+            ". m m m m m m m m m m ."
+            "f f f f f f f f f f f f";
+    }
+
+    /* Section */
+    .section {
+        max-height: 500px;
+    }
+
+    .section h1 {
+        font-size: 3em;
+        margin: 18% 25% 25% 25%;
+    }
+
+    /* Main */
+    .main p.plain-text {
+        margin: 15px 100px;
+    }
+
+    .main iframe {
+        width: 550px;
+        height: 350px;
+    }
+
+    /* Main Flexbox */
+    .main .flex-container {
+        flex-direction: row;
+    }
+
+    /* Grid for Video's */
+    .grid-container-vid {
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: repeat(2, auto);
+        justify-content: space-evenly;
+    }
+
+    .section-vid { 
+        padding: 20px 0 20px 20px;
+    }
+    
+    .section-text { 
+        padding: 20px 0 20px 20px;
+    }
+
+    .grid-container-vid .section-vid iframe {
+        height: fit-content;
+    }
+
+    .main .grid-container-vid .section-text h4 {
+        font-size: 0.75em;
+    }
+
+    /* Footer */
+
+    .footer .flex-container {
+        flex-direction: row;
+        justify-content: space-evenly;
+    }
+}
+
+@media (min-width: 1400px) {
+    body {
+        font-size: 20px;
+    }
+
+    .grid-container {
+        grid-template-areas: 
+            "h n n n n n n n n n n n"
+            "s s s s s s s s s s s s"
+            ". m m m m m m m m m m ."
+            "f f f f f f f f f f f f";
+    }
+
+    /* Section */
+    .section {
+        max-height: 850px;
+    }
+
+    /* Main */
+    .main p.plain-text {
+        margin: 15px 250px;
+    }
+
+    .main iframe {
+        width: 650px;
+        height: 400px;
+    }
+
+    .main img.inline-img {
+        width: 550px;
+    }
+
+    .main .form {
+        margin: 0 300px;
+    }
+
+    /* Grid for Video's */
+    .grid-container-vid {
+        grid-template-columns: repeat(4, 1fr);
+        justify-content: space-evenly;
+    }
+
+    .grid-container-vid .section-vid iframe {
+        width: 350px;
+        height: 200px;
+    }
+}
